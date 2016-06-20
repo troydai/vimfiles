@@ -13,4 +13,6 @@ set gfn=Consolas
 set noswapfile
 set nobackup
 
-colorscheme Kafka
+colorscheme luna
+
+set guifont=Monaco:h14
