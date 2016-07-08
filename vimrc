@@ -8,11 +8,15 @@ set autoindent
 set number
 set expandtab
 
-set gfn=Consolas
 
 set noswapfile
 set nobackup
 
 colorscheme luna
 
-set guifont=Monaco:h14
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin'
+    set guifont=Monaco:h14
+else
+    set guifont=Consolas:h12
+endif
