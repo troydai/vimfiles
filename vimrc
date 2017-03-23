@@ -12,14 +12,15 @@ set expandtab
 set noswapfile
 set nobackup
 
-if has('gui_running') and os != 'Ubuntu'
+if has('gui_running') && os != 'Ubuntu'
     set background=dark
     colorscheme solarized
 endif
 
 let os=substitute(system('uname'), '\n', '', '')
 if os == 'Darwin'
-    set guifont=Monaco:h12
+    set macligatures
+    set guifont=Fira\ Code:h12
 elseif os == 'Windows'
     set guifont=Consolas:h12
 endif
