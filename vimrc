@@ -12,17 +12,18 @@ set expandtab
 set noswapfile
 set nobackup
 
+let os=substitute(system('uname'), '\n', '', '')
+
 if has('gui_running') && os != 'Ubuntu'
     set background=dark
-    colorscheme solarized
+    colorscheme Kafka
 endif
 
-let os=substitute(system('uname'), '\n', '', '')
 if os == 'Darwin'
     set macligatures
-    set guifont=Fira\ Code:h12
+    set guifont=Fira\ Code:h14
 elseif os == 'Windows'
-    set guifont=Consolas:h12
+    set guifont=Consolas:h14
 endif
 
 autocmd StdinReadPre * let s:std_in=1
