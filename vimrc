@@ -20,7 +20,9 @@ if has('gui_running') && os != 'Ubuntu'
 endif
 
 if os == 'Darwin'
-    set macligatures
+    if has('gui_running')
+        set macligatures
+    endif
     set guifont=Fira\ Code:h14
 elseif os == 'Windows'
     set guifont=Consolas:h14
